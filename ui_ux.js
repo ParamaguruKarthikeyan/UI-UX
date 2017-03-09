@@ -17,11 +17,10 @@ dhn_server.on("error",function(e){
 		process.exit(0);
 	}
 })
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+var server_port = process.env.PORT || 8080;
 
-dhn_server.listen(server_port, server_ip_address, function () {	
-	console.log( "Listening on " + server_ip_address + ", port " + server_port )
+dhn_server.listen(server_port, function () {	
+	console.log( "Started ui-ux mani" )
 });
 /*
 var readerStream = readline.createInterface({
