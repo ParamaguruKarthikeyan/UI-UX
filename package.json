@@ -1,7 +1,6 @@
 {
-  "name": "MyApp",
+  "name": "ui-ux",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
     "start": "node ui_ux.js"
   },
