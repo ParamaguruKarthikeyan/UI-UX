@@ -18,11 +18,11 @@ define([
 			url: '/login',
 			views: {
 				root: {
-					templateUrl: "/app/auth/views/login.html",
+					templateUrl: "app/auth/views/login.html",
 					controller: 'LoginCtrl',
 					resolve: {
 						deps: $couchPotatoProvider.resolveDependencies([
-							'/auth/controllers/LoginCtrl'
+							'auth/controllers/LoginCtrl'
 						])
 					}
 				}
