@@ -49,7 +49,7 @@ var uiConfig = {
 			{
 				"type"				:	"computer",
 				"given_name" 		:	"Office Laptop",
-				"device_id"			:	"kdfj45gkh7ykk7987jhkjhkj",
+				"device_id"			:	"kdfj45gkh7ykk798",
 				"device_status"		:	"online",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -59,7 +59,7 @@ var uiConfig = {
 			},{
 				"type"				:	"computer",
 				"given_name" 		:	"Personal Laptop",
-				"device_id"			:	"ljlvcj56gfh6768j3khk08nnljhl",
+				"device_id"			:	"ljlvcj3khk08nnljhl",
 				"device_status"		:	"offline",
 				"connected_method"	:	"ethernet",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -69,7 +69,7 @@ var uiConfig = {
 			},{
 				"type"				:	"computer",
 				"given_name" 		:	"Son's Desktop",
-				"device_id"			:	"ljlvcj32556gfhj3khk08nnljhl",
+				"device_id"			:	"56gfhj3khk08nnljhl",
 				"device_status"		:	"blocked",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -80,7 +80,7 @@ var uiConfig = {
 			{
 				"type"				:	"mobiles",
 				"given_name" 		:	"Lenovo",
-				"device_id"			:	"kdfj45809870987gkh7ykkjhkjhkj",
+				"device_id"			:	"870987gkh7ykkjhkjhkj",
 				"device_status"		:	"online",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -90,7 +90,7 @@ var uiConfig = {
 			},{
 				"type"				:	"printer",
 				"given_name" 		:	"HP Living Room",
-				"device_id"			:	"ljlvcj56gfh476j3khk08nnljhl",
+				"device_id"			:	"ljlvc476j3khk08nnljhl",
 				"device_status"		:	"offline",
 				"connected_method"	:	"ethernet",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -100,7 +100,7 @@ var uiConfig = {
 			},{
 				"type"				:	"mobiles",
 				"given_name" 		:	"",
-				"device_id"			:	"ljlvcj56gfhj3k34636hk08nnljhl",
+				"device_id"			:	"ljlvcj56gfhj3k34ljhl",
 				"device_status"		:	"blocked",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -111,7 +111,7 @@ var uiConfig = {
 			{
 				"type"				:	"CCTV",
 				"given_name" 		:	"Cam 1",
-				"device_id"			:	"kdfj45gkh7y708708kkjhkjhkj",
+				"device_id"			:	"kdfj45gkh7y70kkjhkjhkj",
 				"device_status"		:	"online",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -121,7 +121,7 @@ var uiConfig = {
 			},{
 				"type"				:	"CCTV",
 				"given_name" 		:	"Cam 2",
-				"device_id"			:	"ljlvcj56gf653465hj3khk08nnljhl",
+				"device_id"			:	"ljlv465hj3khk08nnljhl",
 				"device_status"		:	"online",
 				"connected_method"	:	"ethernet",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -131,7 +131,7 @@ var uiConfig = {
 			},{
 				"type"				:	"CCTV",
 				"given_name" 		:	"Cam 3",
-				"device_id"			:	"ljlvcj56gfhj3khk0870870nnljhl",
+				"device_id"			:	"ljlvcj56gfhj70nnljhl",
 				"device_status"		:	"online",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -141,7 +141,7 @@ var uiConfig = {
 			},{
 				"type"				:	"CCTV",
 				"given_name" 		:	"Cam 4",
-				"device_id"			:	"ljlvcj56gfhj33643khk08nnljhl",
+				"device_id"			:	"ljlvcj56gfhj33643jhl",
 				"device_status"		:	"offline",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -151,7 +151,7 @@ var uiConfig = {
 			},{
 				"type"				:	"smart_tv",
 				"given_name" 		:	"Hall Sony",
-				"device_id"			:	"ljlvcj56gfhj3k097809hk08nnljhl",
+				"device_id"			:	"ljlv3k097809hk08nnljhl",
 				"device_status"		:	"online",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
@@ -161,7 +161,7 @@ var uiConfig = {
 			},{
 				"type"				:	"smart_tv",
 				"given_name" 		:	"Bed Rom FF",
-				"device_id"			:	"ljlvcj56gfhj3k70708k08nnljhl",
+				"device_id"			:	"ljl3k70708k08nnljhl",
 				"device_status"		:	"offline",
 				"connected_method"	:	"wifi",
 				"allowed_conn_mtd"	:	["wifi", "ethernet"],
