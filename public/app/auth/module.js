@@ -22,7 +22,7 @@ define([
 					controller: 'LoginCtrl',
 					resolve: {
 						deps: $couchPotatoProvider.resolveDependencies([
-							'auth/controllers/LoginCtrl'
+							'auth/controllers/loginCtrl'
 						])
 					}
 				}
