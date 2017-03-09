@@ -1,0 +1,47 @@
+<div id="content" class="component_view">
+	<style>
+		.modal{
+			pointer-events: none;
+		}
+		.modal-content{
+			pointer-events: auto !important;
+		}
+		.modal-header{
+			padding-top:8px !important;
+			padding-bottom:8px !important;
+			color : #eae5e5;
+		}
+		.modal-header .modal-title{
+			background-image: url(/styles/img/setting.png);
+			background-repeat: no-repeat;
+			background-size: 25px;
+			padding-left: 31px;
+		}
+		.default_setting_tool{
+			height: 47px;
+			top: 30px;
+			right: 30px;
+			position: relative;
+			background-image : url("/styles/img/setting.png");
+			width: 59px;
+			background-size: 40px;
+			background-repeat: no-repeat;
+		}
+		.default_setting_tool:hover{
+			cursor:pointer;
+		}
+	</style>
+	<div class="row" style="margin-top:10px;">
+		<div class="col-sm-3"></div>
+		<device-type-carousel class="col-sm-6"></device-type-carousel>
+		<div class="col-sm-3">
+			<a href-void  data-toggle="modal" data-target="#edit_devices_default" data-ng-click="initDeviceDefaultSettingsPopUp()" class="default_setting_tool pull-right hide-mobile hide-iPad"></a>
+		</div>
+	</div>
+	
+	<div class="row" style="margin-left: 10px;margin-right: 10px;">
+		<device-pannel data-ng-repeat="device in devices | filter:current_device_type" device-class="col-xs-12 col-sm-6 col-md-4 container-fluid"></device-pannel>		
+	</div>
+	<ui-include data-url="app/components/devices/views/device_setting_modal_tpl.html"></ui-include>
+	<ui-include data-url="app/components/devices/views/device_default_setting_modal_tpl.html"></ui-include>
+</div>	

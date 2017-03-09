@@ -1,0 +1,72 @@
+<div class="modal fade" id="edit_isp_default" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header item_pannel">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Settings</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-sm-4">ISP Name</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" placeholder="Enter ISP Name" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4">Bill Date</label>
+						<div class="col-sm-3 input-group" style="padding-left: 14px;">
+							<input type="text" class="form-control" placeholder="Enter Bill Date" uib-datepicker-popup ng-model="dt" is-open="popup1.opened">
+							 <span class="input-group-btn">
+								<button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+							  </span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4">Upload Limit</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" placeholder="Enter Upload Limit" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4">Download Limit</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" placeholder="Enter Download Limit" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4">Alert me when the usage crosses</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" placeholder="Enter Download Limit" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4">Max Active Device count</label>
+						<div class="col-sm-8">
+							<input type="number" class="form-control" placeholder="Enter Download Limit" >
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4">Another Field</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" placeholder="Enter Value">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-4">Another Field</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" placeholder="Enter Value">
+						</div>
+					</div>
+				</form>
+				<div class="row">
+					<div class="col-sm-9"></div>
+					<div class="col-sm-3" style="text-align: right;">
+						<button class="btn btn-default" data-dismiss="modal">Close</button>
+						<button class="btn btn-primary" data-dismiss="modal">Save</button>							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

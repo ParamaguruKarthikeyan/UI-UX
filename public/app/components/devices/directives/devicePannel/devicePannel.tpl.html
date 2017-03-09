@@ -1,0 +1,88 @@
+<div class="col-sm-4 container-fluid device_container">
+	<style>
+		.device_pannel{
+		    height: 520px;
+			background: #414141 !important;
+			border-radius: 60px;
+			margin-top:20px;
+		}
+		.device_container{
+			margin-top:10px;
+		}
+		.device_summary > div{
+			margin: 4px 0px 0px 0px;
+		}
+		.device_summary{
+			color : #dad3d3;
+			margin-left:15px;
+		}
+		.device_summary label:after{
+			content : ":";
+			right: 2px;
+			position: absolute;
+		}
+		.device_summary_tools{
+		text-align: right;
+			padding-right: 61px;
+			padding-top: 10px;
+		}
+		.device_summary_tools a{
+			padding: 2px;
+			min-width: 50px;
+		}
+		.device_summary_tools a.unblock{
+			min-width: 55px;
+		}
+		
+	</style>	
+	<div  class="item_pannel device_pannel">
+		<span class="connection_type {{device.connected_method}}" data-uib-tooltip="{{device.connected_method == 'wifi'? 'Connected via Wifi': 'Connected via Ethernet'}}"></span>
+		<span class="connection_status {{device.device_status}}">
+			<b class="badge" data-ng-if="device.device_status == 'online'" data-uib-tooltip="Online"></b>
+			<b class="badge" data-ng-if="device.device_status == 'offline'" data-uib-tooltip="Offline"></b>
+			<b class="badge fa fa-ban" data-ng-if="device.device_status == 'blocked'" data-uib-tooltip="Blocked"></b>
+		</span>
+		<span class="given_name">{{device.given_name.length > 0 ? device.given_name : 'Unknown'}}</span>
+		<div class="row">
+			<div class="col-sm-12">
+				<canvas class="chart_canvas" width="50" height="15" style="margin-left:5px;"></canvas>
+			</div>
+		</div>
+		<div class="row" style="margin-top:10px;">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<uib-progressbar class=" active" animate="true" max="device.data_limit_in_gb" value="device.data_used_in_gb"   type="success" data-ng-if="(device.data_used_in_gb <= (device.data_limit_in_gb*.4))" data-uib-tooltip="{{device.data_used_in_gb + 'GB / ' + device.data_limit_in_gb + 'GB'}}"><i>{{((device.data_used_in_gb/device.data_limit_in_gb)* 100) | number:0}}%</i></uib-progressbar>
+				<uib-progressbar class=" active" animate="true" max="device.data_limit_in_gb" value="device.data_used_in_gb" type="warning" data-ng-if="(device.data_used_in_gb >= (device.data_limit_in_gb*.4)) && (device.data_used_in_gb <= (device.data_limit_in_gb*.7))" data-uib-tooltip="{{device.data_used_in_gb  + 'GB / ' +  device.data_limit_in_gb + 'GB'}}"><i>{{((device.data_used_in_gb/device.data_limit_in_gb)* 100) | number:0}}%</i></uib-progressbar>
+				<uib-progressbar class=" active" animate="true" max="device.data_limit_in_gb" value="device.data_used_in_gb" type="danger" data-ng-if="(device.data_used_in_gb >= (device.data_limit_in_gb*.7))" data-uib-tooltip="{{device.data_used_in_gb + 'GB / ' + device.data_limit_in_gb + 'GB'}}"><i>{{((device.data_used_in_gb/device.data_limit_in_gb)* 100) | number:0}}%</i></uib-progressbar>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+		<div class="row device_summary" style="margin-top:10px;">
+			<div class="col-sm-12 col-xs-12">
+				<label class="col-sm-5 col-xs-5">Device ID</label>
+				<div class="col-sm-6 col-xs-6">{{device.device_id}}</div>
+			</div>
+			<div class="col-sm-12 col-xs-12">
+				<label class="col-sm-5 col-xs-5">Device Status</label>
+				<div class="col-sm-6 col-xs-6">{{device.device_status}}</div>
+			</div>
+			<div class="col-sm-12 col-xs-12">
+				<label class="col-sm-5 col-xs-5">Data Used</label>
+				<div class="col-sm-6 col-xs-6">{{device.data_used_in_gb}}GB</div>
+			</div>
+			<div class="col-sm-12 col-xs-12" >
+				<label class="col-sm-5 col-xs-5">Another property</label>
+				<div class="col-sm-6 col-xs-6">Another property</div>
+			</div>
+			<div class="col-sm-12 col-xs-12">
+				<label class="col-sm-5 col-xs-5">Another property</label>
+				<div class="col-sm-6 col-xs-6">Another property</div>
+			</div>			
+		</div>
+		<div class="row device_summary_tools" >
+			<a href-void data-toggle="modal" data-ng-click="initDeviceSettingsPopUp(device.device_id)" data-target="#edit_device" class="btn btn-primary hide-mobile hide-iPad">Edit</a>
+			<a href-void class="btn btn-danger" data-ng-show="device.device_status != 'blocked'" data-ng-click="blockDevice(device.device_id)">Block</a>
+			<a href-void class="btn btn-danger unblock" data-ng-show="device.device_status == 'blocked'" data-ng-click="unblockDevice(device.device_id)">Unblock</a>
+		</div>
+	</div>
+</div>

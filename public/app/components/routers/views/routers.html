@@ -1,0 +1,135 @@
+<div id="content" class="component_view">
+	<style>
+		.routerHeader{
+		    height: 50px;
+			background: rgba(164, 167, 179, 0.21);
+			border-radius: 10px;
+			border-top: 2px #080808 solid;
+			color : rgba(242,246,248,1);
+		}
+		.routers_panel{
+			margin-top: 10px;
+			background: rgba(164, 167, 179, 0.21);
+			color : rgba(242,246,248,1);
+		}
+		.routers_panel .header{
+			height: 50px;
+		}
+		
+		.routers_panel.open .header{
+		border-bottom: 1px dashed hsla(0, 19%, 82%, 0.41);
+			padding-bottom: 14px;
+		}
+		.row.router .control-label{
+			text-align : left !important;
+		}
+		.toggle_router_icon{
+			font-size: 20px;
+			margin-right: 25%;
+		}
+		.toggle_router_icon:hover{
+			cursor:pointer;
+		}
+		.routers_panel.open.open .toggle_router_icon{
+			display:none;
+		}
+	</style>
+	<div class="row" style="margin-left:5%;margin-top:10px;">
+		<div class="col-sm-11 routerHeader">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-3 text-left" style="padding-left:0;">
+				<h4>Device Name</h4>
+			</div>
+			<div class="col-sm-2 text-center">
+				<h4>Type</h4>
+			</div>
+			<div class="col-sm-2 text-center">
+				<h4>Status</h4>
+			</div>
+			<div class="col-sm-2 text-center">
+				
+			</div>
+		</div>
+		<div data-ng-repeat="router in routers" class="col-sm-11 routers_panel closed {{$index}}_index" >
+			<div class="row header" style="padding-top:5px;">
+				<div class="col-sm-1">
+					<i class="glyphicon glyphicon-th-large pull-left" style="top: 12px;font-size: 14px;left: 15px;transform: rotate(133deg);"></i>
+				</div>
+				<div class="col-sm-3 text-left">
+					<h4>{{router.name}}</h4> 
+				</div>
+				<div class="col-sm-2 text-center">
+					<h4>{{router.type}}</h4>
+				</div>
+				<div class="col-sm-2 text-center" data-ng-class="router.power_save?'txt-green':'text-danger'">
+					<h4> {{router.power_save?'On' : 'Off'}} </h4>
+				</div>
+				<div class="col-sm-2 text-center" data-ng-class="router.auto_login_isp?'text-danger':'txt-green'">
+					<h4> {{router.auto_login_isp?'Insecure' : 'Secure'}} </h4>
+				</div>
+				<div class="col-sm-2 text-right" style="margin-top: 10px;">
+				<a href-void class="toggle_router_icon" data-ng-click="open_routers_panel($index)"><i class="glyphicon glyphicon-triangle-bottom"></i></a>
+				</div>
+			</div>
+			<div id="router_{{$index}}" class="row router collapse">
+				<div class="row" style="margin-top:10px">
+					<form class="form-horizontal" style="margin-left: 2%;">
+						<fieldset>
+							<div class="form-group">
+								<div class="col-sm-1"></div>
+								<label class="control-label col-sm-2">Power </label>
+								<label class="col-sm-8 switch">
+									<input type="checkbox" data-ng-model="router.power_save">
+									<div class="slider round" on-state='On' off-state='Off'></div>
+								</label>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-1"></div>
+								<label class="control-label col-sm-2">Security Type</label>
+								<div class="col-sm-2" style="padding-left: 0px !important;">
+									<select class="form-control" data-ng-options="o.v as o.n for o in [{ n: 'No Authentication(open)', v: 0 }, { n: 'WPA2-Personal', v: 1 }, { n: 'WEP', v: 2 }]" data-ng-model="router.security_type"></select>
+								</div>
+							</div>
+							<div class="form-group" data-ng-show="router.security_type != 0">
+								<div class="col-sm-1"></div>
+								<label class="control-label col-sm-2">Security key</label>
+								<div class="col-sm-3" style="padding-left:0;">
+									<input type="password" class="form-control" placeholder="Enter Security key" data-ng-model="router.security_key">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<div class="col-sm-1"></div>
+								<label class="control-label col-sm-2">Auto Login to ISP</label>
+								<label class="col-sm-8 switch">
+									<input type="checkbox" name="auto_login_isp"  data-ng-model="router.auto_login_isp">
+									<div class="slider round" on-state='Yes' off-state='No'></div>
+								</label>
+							</div>
+							<div class="form-group" data-ng-show="router.auto_login_isp">
+								<div class="col-sm-1"></div>
+								<label class="control-label col-sm-2">ISP Credentials</label>
+								<div class="col-sm-3" style="padding-left:0;">
+									<input type="text" class="form-control" placeholder="ISP Username" data-ng-model="router.isp_credentials.username">
+								</div>
+								<div class="col-sm-3" style="padding-left:0;">
+									<input type="password" class="form-control" placeholder="ISP Password" data-ng-model="router.isp_credentials.password">
+								</div>
+							</div>							
+						</fieldset>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<a href-void class="btn btn-primary pull-right" style="margin-right: 10px;margin-bottom: 10px;" data-ng-click="open_routers_panel($index)">Save</a>
+						<a href-void class="btn btn-default pull-right" style="margin-right: 10px;margin-bottom: 10px;" data-ng-click="open_routers_panel($index)">Cancel</a>
+					</div>
+				</div>
+			</div>
+			   
+			
+		</div>
+		
+	</div>
+	
+</div>

@@ -1,0 +1,128 @@
+<div id="content" class="component_view">
+	<style>		
+		.signle-point:first-of-type{
+			margin-top:45px !important;
+		}
+		.signle-point{
+		    height: 45px;
+			background: #47AFAF ;
+			color: #131313;
+			font-size: 22px;
+			display: block;
+			width: 80%;
+			margin-top:12px;
+			position: relative;
+			animation-duration: 1s;
+			-webkit-animation-fill-mode:forwards;
+			-moz-animation-fill-mode:forwards;
+			-ms-animation-fill-mode:forwards;
+			animation-fill-mode:forwards; 
+			margin-bottom: 15px;
+		}
+		.signle-point.left{
+			border-radius: 0px 8px 8px 0px;
+			padding: 4px 0px 0px 8px;
+			left: -500px;
+			animation-name: slide-in-left;			
+			-webkit-box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: 8px 8px 5px 0px rgba(0,0,0,0.75);
+			margin-top: 24px;
+		}
+		.signle-point.right{
+			border-radius: 8px 0px 0px 8px;
+			padding: 4px 8px 0px 0px;
+			float:right;
+			right: -500px;
+			text-align:right;
+			animation-name: slide-in-right;
+			animation-duration: 1s;
+			-webkit-box-shadow: -8px 8px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: -8px 8px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: -8px 8px 5px 0px rgba(0,0,0,0.75);
+		}
+		
+		@keyframes slide-in-left {
+			from {
+				left : -500px;
+			}
+			to {
+				left : 12px;
+			}
+		}
+		@keyframes slide-in-right {
+			from {
+				right : -500px;
+			}
+			to {
+				right : 0px;
+			}
+		}
+		.default_setting_tool{
+			height: 47px;
+			position: fixed;
+			background-image : url("/styles/img/setting.png");
+			width: 59px;
+			background-size: 40px;
+			background-repeat: no-repeat;
+			right:0px;
+		}
+		.default_setting_tool:hover{
+			cursor:pointer;
+		}
+		.modal{
+			pointer-events: none;
+		}
+		.modal-content{
+			pointer-events: auto !important;
+		}
+		.modal-header{
+			padding-top:8px !important;
+			padding-bottom:8px !important;
+			color : #eae5e5;
+		}
+		.modal-header .modal-title{
+			background-image: url(/styles/img/setting.png);
+			background-repeat: no-repeat;
+			background-size: 25px;
+			padding-left: 31px;
+		}
+	</style>
+	<ui-include data-url="app/components/home/views/isp_default_setting_modal_tpl.html"></ui-include>
+	<div class="wrapper" style="margin-top: 12px;">
+		<div class="row" style="height:32vh;">
+			<div class="col-sm-4 hide-mobile" style="overflow:hidden;">
+				<div class="signle-point left" style="animation-delay:0s;">
+					<span>Connected Devices : 4</span>
+				</div>
+				<div class="signle-point left" style="animation-delay:0.2s;">
+					<span>Subscriptions : 2</span>
+				</div>
+				<div class="signle-point left" style="animation-delay:0.4s;">
+					<span>Another Property : XXX</span>
+				</div>
+			</div>
+			<div class="col-sm-4 gauge">
+				<div id="g1"></div>
+				<just-gauge id="bandwidth" gauge-max="{{uiConfig.home.gauge_max}}" gauge-min="{{uiConfig.home.gauge_min}}" gauge-label="Gbps" gauge-refresh-every="5"></just-gauge>
+			</div>
+			<div class="col-sm-4 hide-mobile" style="overflow:hidden;">
+				<a href-void  data-toggle="modal" data-target="#edit_isp_default" class="default_setting_tool pull-right hide-mobile hide-iPad"></a>
+				<div class="signle-point right"  style="animation-delay:0s;">
+					<span>Data Usage : 27 GB</span>
+				</div>
+				<div class="signle-point right" style="animation-delay:0.2s;">
+					<span>Unbilled Amount : 1299/-</span>
+				</div>
+				<div class="signle-point right" style="animation-delay:0.4s;">
+					<span>Due Date : 25 July 2017</span>
+				</div>
+			</div>			
+		</div>
+		<div class="row"  style="height:50vh;">
+			<div class="col-sm-12">
+				<canvas class="mani" height="80" ng-init="createDataUsageChart()"style="padding:12px 12px 0px 12px"></canvas>
+			</div>
+		</div>
+	</div>
+</div>

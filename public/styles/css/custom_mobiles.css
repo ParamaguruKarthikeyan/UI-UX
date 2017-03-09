@@ -1,0 +1,109 @@
+@media only screen and (max-width: 768px){
+	.hide-mobile{
+		display : none;
+	}
+	.navbar-brand{
+		font-size : 15px !important;
+	}
+	.item_pannel.devices_carousel .action {
+		font-size: 50px;
+	}
+	.item_pannel.devices_carousel .left,.item_pannel.devices_carousel .right{
+		display:none;
+	}
+	.item_pannel.devices_carousel .col-xs-2{
+		width:20%;
+	}
+
+	.devices_carousel{
+		height: 55px;
+		border-radius: 7px;
+	}
+	.device_type {
+		height: 42px;
+		padding: 4px;
+		margin-top: 6px;
+	}
+	.device_type img{
+		height: 40px;
+		-webkit-transition-property: height; /* Safari */
+		-webkit-transition-duration: 1s; /* Safari */
+		transition-property: height;
+		transition-duration: 1s;
+	}
+	.device_type.active img{
+		height: 38px;
+	}
+	.device_type.active{
+		background-color: #7B7B7B;
+		border-radius: 5px;
+	}
+	.active_device_count{
+		position: absolute;
+		right: 6px;
+		top: -3px;
+		background-color: #2c97de;
+	}
+	
+	.connection_type, .connection_status{
+		width: 50px;
+		height: 50px;
+		position: relative;
+		top: -25px;
+		border-radius: 100px;
+		display:inline-flex;
+		left: 45px;
+		background: #767171;
+	}
+	.connection_type {
+		margin-right: 4px
+	}
+	.connection_type.wifi{
+		background-image: url(/styles/img/connection/wifi.png);
+		background-repeat: no-repeat;
+		background-position: 5px 6px;
+		background-size: 40px;
+	}	
+	.connection_type.ethernet{
+		background-image: url(/styles/img/connection/ethernet.png);
+		background-repeat: no-repeat;
+		background-position: 10px 6px;
+		background-size: 39px;
+	}
+	
+	.connection_status .badge{
+		width: 40px;
+		height: 40px;
+		display: block;
+		border-radius: 100px;
+		top: 5px;
+		left: 5px;
+		position: absolute
+	}
+	.connection_status.online .badge{
+		background: #00B050;
+	}
+	.connection_status.offline .badge{
+		background: #A6A6A6;
+	}
+	.connection_status.blocked .badge{
+		font-size: 42px;
+		color: #A90329;
+		top: 1px;
+		left: 0px;
+	}
+	.device_container .given_name{
+		left: 67px;
+		position: relative;
+		top: -30px;
+		font-size: 16px;
+		color: #eae5e5;
+	}
+	.progress{
+		height:35px;
+	}
+	.progress .progress-bar{
+		line-height:35px;
+	}
+	
+}

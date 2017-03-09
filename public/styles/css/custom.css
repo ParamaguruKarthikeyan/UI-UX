@@ -1,0 +1,156 @@
+html, body {
+  height: height:100vh;
+}
+body{
+	background-color:#17181B;
+	/*background-image : url("/styles/img/background.jpg");*/
+	background-repeat: round;
+	height:100%;
+	min-height:100vh;
+	color: #5C5C5C;
+	padding-bottom: 75px;
+}
+.spin-me {
+    -webkit-animation: spin-custom 1500ms infinite linear;
+    animation: spin-custom 1500ms infinite linear;
+}
+@-webkit-keyframes spin-custom {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin-custom {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+
+.bg_dark_gradient{
+	border-top: 2px #080808 solid;
+	background: #4c4c4c;
+	background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #474747 39%, #111111 80%, #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #4c4c4c), color-stop(12%, #595959), color-stop(39%, #474747), color-stop(80%, #111111), color-stop(91%, #2b2b2b), color-stop(99%, #2c2c2c), color-stop(100%, #131313));
+	background: -webkit-linear-gradient(top, #4c4c4c 0%, #595959 12%, #474747 39%, #111111 80%, #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: -o-linear-gradient(top, #4c4c4c 0%, #595959 12%, #474747 39%, #111111 80%, #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: -ms-linear-gradient(top, #4c4c4c 0%, #595959 12%, #474747 39%, #111111 80%, #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%, #474747 39%, #111111 80%, #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+.footer-bottom.bg_dark_gradient{
+	border:none;
+}
+.item_pannel{
+	border-top: 2px #080808 solid;
+	background: #4c4c4c;
+	background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%,  #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #4c4c4c), color-stop(12%, #595959),  color-stop(91%, #2b2b2b), color-stop(99%, #2c2c2c), color-stop(100%, #131313));
+	background: -webkit-linear-gradient(top, #4c4c4c 0%, #595959 12%, #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: -o-linear-gradient(top, #4c4c4c 0%, #595959 12%, #2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: -ms-linear-gradient(top, #4c4c4c 0%, #595959 12%,#2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%,#2b2b2b 91%, #2c2c2c 99%, #131313 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+.cursor_hover:hover{
+	cursor:pointer;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	color: #eae3e3 !important;
+}
+
+.txt-green {
+	color : #06A54E;
+}
+
+.invert_image_color {
+	filter: invert(90%);
+	-webkit-filter: invert(90%);
+}
+
+.router_icon{
+	width: 19px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+
+
+/*bootstrap toggle radio */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+}
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 20px;
+	width: 20px;
+	left: 4px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+}
+input:checked + .slider:after {
+	content : ""attr(on-state)"";
+	margin-left: 11px;
+    top: 2px;
+    position: absolute;
+}
+input:not(:checked) + .slider:after {
+	content : ""attr(off-state)"";
+	margin-left: 28px;
+    top: 2px;
+    position: absolute;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

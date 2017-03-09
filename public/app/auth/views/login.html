@@ -1,0 +1,122 @@
+<div>
+	<style>
+		@media only screen and (max-width: 768px){
+			/* Mobiles to iPad Screens*/
+			.login_div{
+				width: 90%;
+				height: 45%;
+				top: 25%;
+				left: 5%;
+			}
+			.app_logo{
+				width: 100%;
+				height: 20%;
+				background-size: 125px;
+				background-position-x: 47%;
+				background-position-y: 20%;
+			}
+			.login_div .input-group input{
+				height : 30px;
+				font-size : 12px;
+			}
+		}
+		@media only screen and (min-width: 768px) and (max-width: 1366px) {
+			/* iPad Pro Screens*/
+			.login_div{
+				width: 90%;
+				height: 35%;
+				top: 25%;
+				left: 5%;
+			}
+			.app_logo{
+				width: 100%;
+				height: 25%;
+				background-size: 220px;
+				background-position-x: 47%;
+				background-position-y: 20%;
+			}
+			.login_div .input-group input{
+				height : 50px;
+				font-size : 22px;
+			}			
+		}
+		@media only screen and (min-width: 1366px) {
+			/* Desktop Screens*/
+			.login_div{
+				top: 20%;
+				left: 32%;	
+				width: 35%;
+				height: 45%;
+			}
+			.app_logo{
+				width: 100%;
+				height: 25%;
+				background-size: 191px;
+				background-position-x: 47%;
+				background-position-y: 20%;
+			}
+			.login_div .input-group input{
+				height : 40px;
+				font-size : 15px;
+			}
+		}
+		.login_page, body{
+			height:100vh !important;
+			width: 100vw !important;
+			background-image : url(/styles/img/background.jpg);
+			background-repeat: round;
+		}
+		.login_div{
+			background: rgba(76, 76, 76, 0.39);
+			position: absolute;
+			border-radius: 46px;
+			min-height: 350px;
+		}
+		.app_logo{
+			background-image: url(/styles/img/app_logo.png);
+			display: block;
+			background-repeat: no-repeat;
+			background-blend-mode: hard-light;
+		}
+		.login_div .input-group {
+			margin : 20px 20px 0px 20px;
+		}
+		.login_page .app_header{
+			color: #fff;
+		}
+		.login_page .app_header h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		
+	</style>
+	<div class="login_page">
+		<div class="login_div well text-center">
+			<span class="app_logo"></span>
+			<div class="row">
+				<div class="col-sm-12 app_header">
+						<h3>Digital Home Network</h3> 					
+				</div>
+				<div class="col-sm-12">
+					<div class="input-group">
+						<input type="text" class="form-control text-center" data-ng-model="username"  placeholder="Username" data-ng-keyup="$event.keyCode == 13 ? validateAndLogin() : null">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<div class="input-group">
+						<input type="password" class="form-control text-center" placeholder="Password" data-ng-keyup="$event.keyCode == 13 ? validateAndLogin() : null">
+						<span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+					</div>
+				</div>
+				<div class="col-sm-12">
+				<a class="btn btn-primary pull-right" data-ng-click="validateAndLogin()" style="margin-right: 4%;margin-top: 5%;">
+					Login
+					<i class="glyphicon glyphicon-log-in" data-ng-show="!login_in_progress"></i>
+					<i class="glyphicon glyphicon-hourglass spin-me" data-ng-show="login_in_progress"></i>
+				</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

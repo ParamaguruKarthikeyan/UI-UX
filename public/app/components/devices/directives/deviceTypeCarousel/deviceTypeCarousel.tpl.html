@@ -1,0 +1,19 @@
+<div class="item_pannel devices_carousel">
+	<div class="col-sm-1 left">
+		<a data-ng-click="select_previous_five()" class="action">
+			<i class="fa  fa-angle-double-left"></i>
+		</a>
+	</div>
+	<div class="col-xs-12 col-sm-10 carousel_bar" data-ng-repeat="types in device_types_array" data-ng-show="$index == active_device_array_pos" data-ng-class="($index == active_device_array_pos)? 'active' : ''">
+		<div data-ng-repeat="type in types" class="col-xs-2 col-sm-2 device_type cursor_hover" data-ng-class="$index == active_device_type_pos?'active':''" data-ng-click="select_current_device($index)">
+			<img  data-uib-tooltip="{{type.tooltip}}" src="/styles/img/devices/{{type.img_name}}">
+				<b class="badge active_device_count" data-ng-show="getActive_count(type.type) > 0">{{getActive_count(type.type)}}</b>
+			</img>
+		</div>
+	</div>
+	<div class="col-sm-1 right">
+		<a data-ng-click="select_next_five()" class="action pull-right">
+			<i class="fa  fa-angle-double-right"></i>
+		</a>
+	</div>
+</div>
