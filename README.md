@@ -1,8 +1,9 @@
 ### Digital Home Network GUI ###
-An AngularJs app to monitor and manage my home digital network connection and bandwidth consumption.<br/>
+An AngularJs app to monitor and manage my home network connection.<br/>
 
 
 ### Setup the application for development / testing ###
+Note: The project requires Node.js runninng on your machine. Please use the below link if you haven't installed it already https://nodejs.org/en/download/
 
 * Clone the repository: $ git clone https://github.com/karthikeyanTEME/UI-UX.git
 
