@@ -4,7 +4,7 @@ An AngularJs app to monitor and manage my home digital network connection and ba
 
 ### Setup the application for development / testing ###
 
-* Clone the repository: $ git clone https://github.com/judeaugustinej/UI-UX.git
+* Clone the repository: $ git clone https://github.com/karthikeyanTEME/UI-UX.git
 
 * Navigate to required file location : $ cd UI-UX
 
