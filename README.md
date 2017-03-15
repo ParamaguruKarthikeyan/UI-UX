@@ -1,5 +1,4 @@
 ### Digital Home Network ###
-============================
 An AngularJs app to monitor and manage my home digital network connection and bandwidth consumption.[https://ui-ux.herokuapp.com/](https://ui-ux.herokuapp.com/)
 
 
