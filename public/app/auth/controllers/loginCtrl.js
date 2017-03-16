@@ -8,7 +8,7 @@ define(['../module'], function (module) {
 			$scope.login_in_progress = true;
 			setTimeout(function(){
 				$state.go("app.home.view");
-			}, 1000)
+			}, 300)
 		};
 	});
 });
