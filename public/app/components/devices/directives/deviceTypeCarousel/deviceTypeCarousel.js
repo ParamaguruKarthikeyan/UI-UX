@@ -14,25 +14,13 @@ define(['components/devices/module', 'hammerjs'], function (module) {
 				});
 				
 				$(document).ready(function(){
-<<<<<<< HEAD
-					var hammer_carousel = new Hammer.Manager(carousel);
+
+					var hammer_carousel = new Hammer.Manager(carousel[0]);
 					hammer_carousel.on('swipeleft', function(){
 						scope.select_previous_five();
 					});
 					hammer_carousel.on('swiperight', function(){
 						scope.select_next_five();
-=======
-					carousel.find("*").swipe({
-						swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-							if (direction == 'left') {
-								scope.select_previous_five();
-							}
-							if (direction == 'right'){
-								scope.select_next_five();
-							}						
-						},
-						fingers:1
->>>>>>> d6dca7c85a1cc8c1291e97b031769e8a6c38f91e
 					});
 				});
 			}
