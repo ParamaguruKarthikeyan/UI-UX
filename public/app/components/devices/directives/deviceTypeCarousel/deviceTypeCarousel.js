@@ -13,7 +13,7 @@ define(['components/devices/module', 'touch-swipe'], function (module) {
 					carousel.addClass(carosul_class);
 				});
 				$(document).ready(function(){
-					carousel.swipe({
+					carousel.find("*").swipe({
 						swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
 							if (direction == 'left') {
 								scope.select_previous_five();
