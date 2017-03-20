@@ -15,7 +15,11 @@ define(['components/devices/module', 'hammerjs'], function (module) {
 				
 				$(document).ready(function(){
 
-					var hammer_carousel = new Hammer.Manager(carousel[0]);
+					var hammer_carousel = new Hammer.Manager(carousel[0], {
+						recognizers: [
+							[Hammer.Swipe,{ enable: true, direction: Hammer.DIRECTION_HORIZONTAL }],
+						]
+					});
 					hammer_carousel.on('swipeleft', function(){
 						scope.select_previous_five();
 					});
