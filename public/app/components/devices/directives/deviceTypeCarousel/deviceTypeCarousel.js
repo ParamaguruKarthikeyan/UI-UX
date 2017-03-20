@@ -13,7 +13,7 @@ define(['components/devices/module', 'hammerjs'], function (module) {
 					carousel.addClass(carosul_class);
 				});
 				
-				$(document).ready(function(){
+				/*$(document).ready(function(){
 
 					var hammer_carousel = new Hammer.Manager(carousel[0], {
 						recognizers: [
@@ -26,7 +26,7 @@ define(['components/devices/module', 'hammerjs'], function (module) {
 					hammer_carousel.on('swiperight', function(){
 						scope.select_next_five();
 					});
-				});
+				});*/
 			}
 		}
 	}]);
