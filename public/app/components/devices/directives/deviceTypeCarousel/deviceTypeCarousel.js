@@ -1,4 +1,4 @@
-define(['components/devices/module', 'touch-swipe'], function (module) {
+define(['components/devices/module', 'hammerjs'], function (module) {
 	
     'use strict';
 	
@@ -12,17 +12,14 @@ define(['components/devices/module', 'touch-swipe'], function (module) {
 				attrs.$observe('carousel-class', function(carousel_class) {
 					carousel.addClass(carosul_class);
 				});
+				
 				$(document).ready(function(){
-					carousel.swipe({
-						swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-							if (direction == 'left') {
-								scope.select_previous_five();
-							}
-							if (direction == 'right'){
-								scope.select_next_five();
-							}						
-						},
-						fingers:'all'
+					var hammer_carousel = new Hammer.Manager(carousel);
+					hammer_carousel.on('swipeleft', function(){
+						scope.select_previous_five();
+					});
+					hammer_carousel.on('swiperight', function(){
+						scope.select_next_five();
 					});
 				});
 			}

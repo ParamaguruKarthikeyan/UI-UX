@@ -13,7 +13,7 @@ var require = {
 		"ngSanitize"			:	"/libs/angular-couch-potato/angular-sanitize",
 		"justgage"				:	"/libs/justGage/justgage",
 		"chatjs"				:	"/libs/chartjs/Chart.bundle.min",
-		"touch-swipe"			:	"/libs/touch-swipe/jquery.touchSwipe.min",
+		"hammerjs"				:	"/libs/hammerjs/hammer.min",
 		'd3'					: 	'/libs/nv-d3/d3/d3.v3.min',
 		'nvd3' 					: 	'/libs/nv-d3/nv.d3/nv.d3'
 	},
