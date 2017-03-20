@@ -87,8 +87,7 @@
 			background-size: 25px;
 			padding-left: 31px;
 		}
-	</style>
-	<ui-include data-url="app/components/home/views/isp_default_setting_modal_tpl.html"></ui-include>
+	</style> 	<ui-include data-url="app/components/home/views/isp_default_setting_modal_tpl.html"></ui-include>
 	<div class="wrapper" style="margin-top: 12px;">
 		<div class="row" style="height:32vh;">
 			<div class="col-sm-4 hide-mobile" style="overflow:hidden;">
@@ -104,7 +103,7 @@
 			</div>
 			<div class="col-sm-4 gauge">
 				<div id="g1"></div>
-				<just-gauge id="bandwidth" gauge-max="{{uiConfig.home.gauge_max}}" gauge-min="{{uiConfig.home.gauge_min}}" gauge-label="Gbps" gauge-refresh-every="5"></just-gauge>
+				<just-gauge id="bandwidth" gauge-max="{{uiConfig.home.gauge_max}}" gauge-min="{{uiConfig.home.gauge_min}}" gauge-label="Mbps" gauge-refresh-every="5"></just-gauge>
 			</div>
 			<div class="col-sm-4 hide-mobile" style="overflow:hidden;">
 				<a href-void  data-toggle="modal" data-target="#edit_isp_default" class="default_setting_tool pull-right hide-mobile hide-iPad"></a>
