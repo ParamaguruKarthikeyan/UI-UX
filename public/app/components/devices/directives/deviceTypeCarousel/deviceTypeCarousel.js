@@ -22,7 +22,7 @@ define(['components/devices/module', 'touch-swipe'], function (module) {
 								scope.select_next_five();
 							}						
 						},
-						fingers:'all'
+						fingers:1
 					});
 				});
 			}
