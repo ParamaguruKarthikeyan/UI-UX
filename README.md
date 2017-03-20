@@ -15,10 +15,8 @@ Note: The project requires Node.js runninng on your machine. Please use the belo
 
 * Login to the application through browser: http://127.0.0.1:8000
 
-### Authors
-* venky1987@gmail.com
+### Author
 * paramagurukarthikeyan@outlook.com
-* judeaugustinej@gmail.com
 
 ### License
 This project is licensed under the MIT License.
