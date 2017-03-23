@@ -21,6 +21,7 @@ define(['components/home/module'], function (module, nv) {
 					min: gaugeMin,
 					max: gaugeMax,
 					label: gaugeLabel,
+					title : gaugeTitle,
 					shadowOpacity: 0.6,
 					shadowSize: 5,
 					shadowVerticalOffset: 10,

@@ -66,17 +66,18 @@
 				<label class="col-sm-5 col-xs-5">Device Status</label>
 				<div class="col-sm-6 col-xs-6">{{device.device_status}}</div>
 			</div>
+			<div class="col-sm-12 col-xs-12" >
+				<label class="col-sm-5 col-xs-5">Data Allocated</label>
+				<div class="col-sm-6 col-xs-6">{{device.data_limit_in_gb}}GB</div>
+			</div>
 			<div class="col-sm-12 col-xs-12">
 				<label class="col-sm-5 col-xs-5">Data Used</label>
 				<div class="col-sm-6 col-xs-6">{{device.data_used_in_gb}}GB</div>
 			</div>
-			<div class="col-sm-12 col-xs-12" >
-				<label class="col-sm-5 col-xs-5">Another property</label>
-				<div class="col-sm-6 col-xs-6">Another property</div>
-			</div>
+			
 			<div class="col-sm-12 col-xs-12">
-				<label class="col-sm-5 col-xs-5">Another property</label>
-				<div class="col-sm-6 col-xs-6">Another property</div>
+				<label class="col-sm-5 col-xs-5">Connect Via</label>
+				<div class="col-sm-6 col-xs-6 text-capitalize">{{device.allowed_conn_mtd.join(' , ')}}</div>
 			</div>			
 		</div>
 		<div class="row device_summary_tools" >

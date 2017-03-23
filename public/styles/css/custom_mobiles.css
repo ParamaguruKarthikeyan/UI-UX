@@ -8,9 +8,6 @@
 	.item_pannel.devices_carousel .action {
 		font-size: 50px;
 	}
-	.item_pannel.devices_carousel .left,.item_pannel.devices_carousel .right{
-		display:none;
-	}
 	.item_pannel.devices_carousel .col-xs-2{
 		width:20%;
 	}

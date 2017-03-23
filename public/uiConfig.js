@@ -72,7 +72,7 @@ var uiConfig = {
 				"device_id"			:	"56gfhj3khk08nnljhl",
 				"device_status"		:	"blocked",
 				"connected_method"	:	"wifi",
-				"allowed_conn_mtd"	:	["wifi", "ethernet"],
+				"allowed_conn_mtd"	:	["ethernet"],
 				"data_limit_in_gb"	:	5,
 				"data_used_in_gb"	: 	2.1,
 				"using_default_conf":	false
@@ -83,7 +83,7 @@ var uiConfig = {
 				"device_id"			:	"870987gkh7ykkjhkjhkj",
 				"device_status"		:	"online",
 				"connected_method"	:	"wifi",
-				"allowed_conn_mtd"	:	["wifi", "ethernet"],
+				"allowed_conn_mtd"	:	["wifi"],
 				"data_limit_in_gb"	:	8,
 				"data_used_in_gb"	: 	2,
 				"using_default_conf":	false
@@ -103,7 +103,7 @@ var uiConfig = {
 				"device_id"			:	"ljlvcj56gfhj3k34ljhl",
 				"device_status"		:	"blocked",
 				"connected_method"	:	"wifi",
-				"allowed_conn_mtd"	:	["wifi", "ethernet"],
+				"allowed_conn_mtd"	:	["wifi"],
 				"data_limit_in_gb"	:	5,
 				"data_used_in_gb"	: 	0.3,
 				"using_default_conf":	false
@@ -124,7 +124,7 @@ var uiConfig = {
 				"device_id"			:	"ljlv465hj3khk08nnljhl",
 				"device_status"		:	"online",
 				"connected_method"	:	"ethernet",
-				"allowed_conn_mtd"	:	["wifi", "ethernet"],
+				"allowed_conn_mtd"	:	["ethernet"],
 				"data_limit_in_gb"	:	7,
 				"data_used_in_gb"	: 	0,
 				"using_default_conf":	false
@@ -144,7 +144,7 @@ var uiConfig = {
 				"device_id"			:	"ljlvcj56gfhj33643jhl",
 				"device_status"		:	"offline",
 				"connected_method"	:	"wifi",
-				"allowed_conn_mtd"	:	["wifi", "ethernet"],
+				"allowed_conn_mtd"	:	["ethernet"],
 				"data_limit_in_gb"	:	7,
 				"data_used_in_gb"	: 	4,
 				"using_default_conf":	false
