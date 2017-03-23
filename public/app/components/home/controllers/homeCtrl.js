@@ -56,7 +56,7 @@ define(['../module', 'chatjs', 'angular-bootstrap'], function (module) {
 					},
 					title: {
 						display: true,
-						text: 'Data Usage',
+						text: 'Data Usage Trend',
 						position : 'bottom'
 					}
 				}
